@@ -8,6 +8,7 @@ if (process.env.NODE_ENV === 'test') {
 }
 
 const envSchema = z.object({
+  HOST: z.enum(['localhost', '0.0.0.0']),
   NODE_ENV: z
     .enum(['development', 'test', 'production'])
     .default('development'),
